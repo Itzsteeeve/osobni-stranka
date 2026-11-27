@@ -1,3 +1,51 @@
+body {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #fff;
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+a {
+  color: #164d70;
+}
+
+:focus-visible {
+  outline: 0.15rem solid #164d70;
+  outline-offset: 0.15rem;
+}
+
+.skip-link {
+  position: absolute;
+  inset-block-start: 0.5rem;
+  padding: 0.5rem;
+  background: #fff;
+}
+
+.skip-link:not(:focus) {
+  clip-path: inset(50%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 0.0625rem solid #666;
+  padding: 0.25rem 0.5rem;
+  text-align: left;
+}
+
 @media (min-width: 40em) {
   /* TODO */
 }
