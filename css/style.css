@@ -194,5 +194,27 @@ main {
 }
 
 @media (forced-colors: active) {
-  /* TODO */
+  :root {
+    --background: Canvas;
+    --text: CanvasText;
+    --link: LinkText;
+    --border: CanvasText;
+  }
+
+  main {
+    background-image: none;
+  }
+
+  .card {
+    background-color: Canvas;
+    backdrop-filter: none;
+  }
+
+  .card, th, td {
+    border: 0.125rem solid CanvasText;
+  }
+
+  :focus-visible {
+    outline-color: CanvasText;
+  }
 }
