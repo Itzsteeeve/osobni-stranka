@@ -105,7 +105,33 @@ td {
 }
 
 @media (prefers-contrast: more) {
-  /* TODO */
+  :root {
+    --background: #fff;
+    --text: #000;
+    --link: #003366;
+    --border: #000;
+  }
+
+  .card, th, td {
+    border: 0.125rem solid var(--border);
+  }
+
+  main {
+    background-image: none;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  :root {
+    --background: #000;
+    --text: #fff;
+    --link: #bde7ff;
+    --border: #fff;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
