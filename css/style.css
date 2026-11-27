@@ -73,6 +73,16 @@ td {
   text-align: left;
 }
 
+main {
+  background-image: linear-gradient(135deg, color-mix(in srgb, var(--link) 12%, var(--background)), var(--background));
+}
+
+.card {
+  padding: 0.75rem;
+  background-color: color-mix(in srgb, var(--background) 85%, transparent);
+  backdrop-filter: blur(0.25rem);
+}
+
 @media (min-width: 40em) {
   body {
     max-width: 48rem;
@@ -139,6 +149,11 @@ td {
     background-image: none;
   }
 
+  .card {
+    background-color: var(--background);
+    backdrop-filter: none;
+  }
+
   a {
     text-decoration: underline;
   }
@@ -168,7 +183,14 @@ td {
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  /* TODO */
+  main {
+    background-image: none;
+  }
+
+  .card {
+    background-color: var(--background);
+    backdrop-filter: none;
+  }
 }
 
 @media (forced-colors: active) {
