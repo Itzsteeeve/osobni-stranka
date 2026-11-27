@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   color-scheme: light;
   --background: #fff;
@@ -19,6 +23,21 @@ body {
 
 a {
   color: var(--link);
+  text-underline-offset: 0.12em;
+  transition: text-underline-offset 150ms ease;
+}
+
+a:hover {
+  text-underline-offset: 0.3em;
+}
+
+.card {
+  animation: card-enter 200ms ease-out;
+}
+
+@keyframes card-enter {
+  from { transform: translateY(0.25rem); }
+  to { transform: translateY(0); }
 }
 
 :focus-visible {
@@ -135,7 +154,17 @@ td {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* TODO */
+  html {
+    scroll-behavior: auto;
+  }
+
+  .card {
+    animation: none;
+  }
+
+  a {
+    transition: none;
+  }
 }
 
 @media (prefers-reduced-transparency: reduce) {
